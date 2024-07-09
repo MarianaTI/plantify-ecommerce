@@ -11,37 +11,14 @@ import {
 import Image from "next/image";
 import React from "react";
 
-export default function Login() {
+export default function Register() {
   return (
     <Container>
       <ContainerFormStyled>
         <Content>
-          <FormContainer>
-            <div>
-              <h1>Log In</h1>
-              <span>
-                Log in to your account to explore our wide range of over 300
-                plant varieties, access your order history, and enjoy exclusive
-                member benefits.
-              </span>
-            </div>
-            <Form>
-              <input />
-              <input />
-              <button />
-            </Form>
-            <div>
-              <span>
-                New to Plantify?
-                <a href="/register" className="register">
-                  Sign Up
-                </a>
-              </span>
-            </div>
-          </FormContainer>
           <ImageContainer>
             <Image
-              src="/images/login.jpg"
+              src="/images/register.jpg"
               fill
               sizes="100vw, 100vh"
               priority={false}
@@ -54,6 +31,29 @@ export default function Login() {
               }}
             />
           </ImageContainer>
+          <FormContainer>
+            <div>
+              <h1>Sign Up</h1>
+              <span>
+                Create an account to save your favorite plants, receive
+                personalized recommendations, and get early access to special
+                promotions
+              </span>
+            </div>
+            <Form>
+              <input />
+              <input />
+              <button />
+            </Form>
+            <div>
+              <span>
+                Already have an account?
+                <a href="/" className="register">
+                  Log in
+                </a>
+              </span>
+            </div>
+          </FormContainer>
         </Content>
       </ContainerFormStyled>
       <LinksContainer>

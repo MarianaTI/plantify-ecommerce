@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
   margin: auto;
@@ -29,4 +29,25 @@ a {
   --secondary-inverse: #c7c7c7;
   --tertiary: #575757;
   --tertiary-inverse: #bebebe;
+
+  --primary-500: #3F4637;
+  --primary-400: #5F6854;
+  --primary-300: #808A73;
+  --primary-200: #A1AC94;
+  --primary-100: #C4CEB7;
+  --primary-50: #E7F0DC;
+
+  --secondary-500: #1A5319;
+  --secondary-400: #388636;
+  --secondary-300: #60B95F;
+  --secondary-200: #93EC92;
+  --secondary-100: #CAFFC9;
+  --secondary-50: #F5FFF5;
+
+  --tertiary-500: #314528;
+  --tertiary-400: #506E44;
+  --tertiary-300: #729762;
+  --tertiary-200: #96C083;
+  --tertiary-100: #BBE9A7;
+  --tertiary-50: #F2F7F0;
 }
