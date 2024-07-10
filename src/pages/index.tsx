@@ -13,6 +13,7 @@ import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import ButtonComponent from "@/components/Button/Button";
 
 /**
  * Esta interfaz define la estructura de los valores del formulario.
@@ -84,7 +85,11 @@ export default function Login() {
                   )
                 }
               />
-              <button />
+              <ButtonComponent
+                fullWidth
+                text="Log in"
+                type="submit"
+              />
             </Form>
             <div>
               <span>

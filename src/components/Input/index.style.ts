@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 export const Label = styled.p`
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--secondary);
   margin: 0;
 `;
@@ -21,7 +21,7 @@ export const InputStyled = styled.input<{ fullWidth?: boolean }>`
   margin: 8px 0;
   color: var(--default);
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
   caret-color: var(--primary-500);
   &:focus {
     padding: 12px;

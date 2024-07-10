@@ -28,7 +28,7 @@ export const ContainerFormStyled = styled.div`
 
 export const Content = styled.div`
   width: 800px;
-  height: 500px;
+  height: auto;
   background-color: var(--neutral);
   border-radius: 25px;
   display: grid;

@@ -13,6 +13,7 @@ import Image from "next/image";
 import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import ButtonComponent from "@/components/Button/Button";
 
 interface FormValues {
   username: string;
@@ -96,7 +97,11 @@ export default function Register() {
                   )
                 }
               />
-              <button />
+              <ButtonComponent
+                fullWidth
+                text="Sign up"
+                type="submit"
+              />
             </Form>
             <div>
               <span>
