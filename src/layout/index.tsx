@@ -7,7 +7,7 @@ const StyledLayout = styled.div<{ hasNotLayout: boolean }>`
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: ${({ hasNotLayout }) => (hasNotLayout ? '0' : '56px')}; 
+  /* margin-top: ${({ hasNotLayout }) => (hasNotLayout ? '0' : '56px')};  */
 `;
 
 interface LayoutProps {
