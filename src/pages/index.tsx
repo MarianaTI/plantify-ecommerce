@@ -1,3 +1,4 @@
+import InputComponent from "@/components/Input/Input";
 import {
   Container,
   ContainerFormStyled,
@@ -9,9 +10,45 @@ import {
   LinkStyled,
 } from "@/styles/Login.style";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+/**
+ * Esta interfaz define la estructura de los valores del formulario.
+ * Proporciona una tipificación explícita para los datos del formulario.
+ */
+
+interface FormValues {
+  email: string;
+  password: string;
+}
 
 export default function Login() {
+  const [isShowPassword, setShowPassword] = useState(false);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors, isDirty },
+  } = useForm<FormValues>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!isShowPassword);
+  };
+
+  /**
+   * FormValues se pasa como tipo genérico para asegurar que el hook conoce
+   * la estructura de los datos del formulario.
+   */
+
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
+  };
+
   return (
     <Container>
       <ContainerFormStyled>
@@ -25,9 +62,19 @@ export default function Login() {
                 member benefits.
               </span>
             </div>
-            <Form>
-              <input />
-              <input />
+            <Form onSubmit={handleSubmit(onSubmit)}>
+              <InputComponent
+                fullWidth
+                control={control}
+                name="email"
+                label="Email"
+              />
+              <InputComponent
+                fullWidth
+                control={control}
+                name="password"
+                label="Password"
+              />
               <button />
             </Form>
             <div>

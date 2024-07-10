@@ -53,12 +53,10 @@ export const FormContainer = styled.div`
   flex-direction: column;
   gap: 16px;
   h1 {
-    font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 22px;
   }
   span {
-    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 12px;
     color: var(--tertiary);
@@ -97,7 +95,8 @@ export const LinksContainer = styled.div`
 export const LinkStyled = styled.div`
   display: flex;
   gap: 8px;
-  a, span {
+  a,
+  span {
     color: var(--default);
     font-size: 14px;
     font-weight: 600;
