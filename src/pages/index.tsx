@@ -9,6 +9,7 @@ import {
   LinksContainer,
   LinkStyled,
 } from "@/styles/Login.style";
+import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -74,6 +75,14 @@ export default function Login() {
                 control={control}
                 name="password"
                 label="Password"
+                type={isShowPassword ? "text" : "password"}
+                icon={
+                  isShowPassword ? (
+                    <IoEyeOffSharp onClick={togglePasswordVisibility} />
+                  ) : (
+                    <IoEyeSharp onClick={togglePasswordVisibility} />
+                  )
+                }
               />
               <button />
             </Form>

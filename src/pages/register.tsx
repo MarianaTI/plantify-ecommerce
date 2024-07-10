@@ -1,3 +1,4 @@
+import InputComponent from "@/components/Input/Input";
 import {
   Container,
   ContainerFormStyled,
@@ -9,9 +10,37 @@ import {
   LinkStyled,
 } from "@/styles/Login.style";
 import Image from "next/image";
-import React from "react";
+import { IoEyeSharp, IoEyeOffSharp } from "react-icons/io5";
+import React, { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+
+interface FormValues {
+  username: string;
+  email: string;
+  password: string;
+}
 
 export default function Register() {
+  const [isShowPassword, setShowPassword] = useState(false);
+  const {
+    control,
+    handleSubmit,
+    formState: { errors, isDirty },
+  } = useForm<FormValues>({
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!isShowPassword);
+  };
+
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
+  };
+
   return (
     <Container>
       <ContainerFormStyled>
@@ -31,7 +60,7 @@ export default function Register() {
               }}
             />
           </ImageContainer>
-          <FormContainer>
+          <FormContainer onSubmit={handleSubmit(onSubmit)}>
             <div>
               <h1>Sign Up</h1>
               <span>
@@ -41,8 +70,32 @@ export default function Register() {
               </span>
             </div>
             <Form>
-              <input />
-              <input />
+            <InputComponent
+                fullWidth
+                control={control}
+                name="name"
+                label="Username"
+              />
+            <InputComponent
+                fullWidth
+                control={control}
+                name="email"
+                label="Email"
+              />
+            <InputComponent
+                fullWidth
+                control={control}
+                name="password"
+                label="Password"
+                type={isShowPassword ? "text" : "password"}
+                icon={
+                  isShowPassword ? (
+                    <IoEyeOffSharp onClick={togglePasswordVisibility} />
+                  ) : (
+                    <IoEyeSharp onClick={togglePasswordVisibility} />
+                  )
+                }
+              />
               <button />
             </Form>
             <div>

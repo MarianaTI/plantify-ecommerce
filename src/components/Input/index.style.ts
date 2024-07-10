@@ -16,7 +16,7 @@ export const InputStyled = styled.input<{ fullWidth?: boolean }>`
   width: ${(props) => (props.fullWidth ? "100%" : "auto")};
   height: 40px;
   border-radius: 10px;
-  background-color: var(--secondary-inverse);
+  background-color: #E3E3E3;
   border: none;
   margin: 8px 0;
   color: var(--default);
@@ -41,7 +41,7 @@ export const IconWrapper = styled.div`
   transform: translateY(-48%);
   font-size: 20px;
   cursor: pointer;
-  color: var(--tertiary-inverse);
+  color: #BEBEBE;
 `;
 
 export const ErrorMessage = styled.p`
