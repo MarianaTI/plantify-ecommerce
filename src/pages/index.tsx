@@ -14,6 +14,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import ButtonComponent from "@/components/Button/Button";
+import { useRouter } from "next/router";
 
 /**
  * Esta interfaz define la estructura de los valores del formulario.
@@ -26,6 +27,7 @@ interface FormValues {
 }
 
 export default function Login() {
+  const router = useRouter();
   const [isShowPassword, setShowPassword] = useState(false);
   const {
     control,
@@ -41,6 +43,10 @@ export default function Login() {
   const togglePasswordVisibility = () => {
     setShowPassword(!isShowPassword);
   };
+
+  const navigateToHome = () => {
+    router.push("/home");
+  }
 
   /**
    * FormValues se pasa como tipo genérico para asegurar que el hook conoce
@@ -89,6 +95,7 @@ export default function Login() {
                 fullWidth
                 text="Log in"
                 type="submit"
+                onClick={navigateToHome}
               />
             </Form>
             <div>
