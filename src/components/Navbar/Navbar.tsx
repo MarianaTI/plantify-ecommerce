@@ -57,9 +57,9 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12 lg:items-center lg:px-6">
-          <StyledLink href="#">Home</StyledLink>
-          <StyledLink href="#">Shop</StyledLink>
-          <StyledLink href="#">About us</StyledLink>
+          <StyledLink href="/home">Home</StyledLink>
+          <StyledLink href="/shop">Shop</StyledLink>
+          <StyledLink href="/about">About us</StyledLink>
           {renderNavbarButton()}
         </div>
       </nav>

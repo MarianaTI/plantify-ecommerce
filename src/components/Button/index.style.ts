@@ -1,6 +1,12 @@
 import styled from "@emotion/styled";
+import css from "styled-jsx/css";
 
-export const ButtonStyled = styled.button<{ fullWidth?: boolean }>`
+interface ButtonStyledProps {
+  fullWidth?: boolean;
+  secondary?: boolean;
+}
+
+export const ButtonStyled = styled.button<ButtonStyledProps>`
   width: ${(props) => (props.fullWidth ? "100%" : "auto")};
   margin: 16px 0;
   padding: 0 40px;
@@ -17,4 +23,14 @@ export const ButtonStyled = styled.button<{ fullWidth?: boolean }>`
   :hover {
     background-color: var(--secondary-500);
   }
+  ${(props) =>
+    props.secondary &&
+    `
+      background-color: transparent;
+      border: 1px solid var(--secondary-400);
+      color: var(--secondary-400);
+        :hover {
+      background-color: var(--secondary-60);
+  }
+    `}
 `;
