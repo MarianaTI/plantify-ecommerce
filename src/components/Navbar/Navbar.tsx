@@ -4,13 +4,10 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import {
   Bars3Icon,
   XMarkIcon,
-  UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 import { ButtonStyled, StyledLink } from "./index.style";
 import { PiShoppingCartSimple } from "react-icons/pi";
-import { LiaUserSolid } from "react-icons/lia";
-import { LuUser2 } from "react-icons/lu";
 import { AiOutlineUser } from "react-icons/ai";
 
 const Navbar = () => {
