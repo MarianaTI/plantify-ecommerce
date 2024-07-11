@@ -1,5 +1,6 @@
 import ButtonComponent from "@/components/Button/Button";
 import CategoriesComponent from "@/components/Categories/Categories";
+import ProductComponent from "@/components/Product/Product";
 import {
   ButttonContainer,
   CategoriesContainer,
@@ -94,6 +95,9 @@ export default function Home() {
       </SectionStyled>
       <ProductContainer>
         <h3>New products</h3>
+        <div>
+          <ProductComponent/>
+        </div>
       </ProductContainer>
     </Container>
   );
