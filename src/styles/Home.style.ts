@@ -70,7 +70,7 @@ export const SectionStyled = styled.div`
 `;
 
 export const Top = styled.section`
-  background-color: var(--default-inverse);
+  background-color: #eee;
   height: 250px;
   width: 520px;
   margin: 72px 0;
@@ -126,6 +126,7 @@ export const TopContent = styled.div`
 
 export const ProductContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 48px 0;
@@ -133,4 +134,12 @@ export const ProductContainer = styled.div`
     font-size: 30px;
     font-weight: 500;
   }
+`;
+
+export const Products = styled.div`
+  width: 85%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 120px;
+  padding: 32px 40px;
 `;

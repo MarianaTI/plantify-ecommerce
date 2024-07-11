@@ -10,6 +10,7 @@ import {
   Main,
   MainContent,
   ProductContainer,
+  Products,
   SectionStyled,
   Top,
   TopContent,
@@ -95,9 +96,16 @@ export default function Home() {
       </SectionStyled>
       <ProductContainer>
         <h3>New products</h3>
-        <div>
+        <Products>
           <ProductComponent/>
-        </div>
+          <ProductComponent/>
+          <ProductComponent/>
+          <ProductComponent/>
+          <ProductComponent/>
+          <ProductComponent/>
+          <ProductComponent/>
+          <ProductComponent/>
+        </Products>
       </ProductContainer>
     </Container>
   );
