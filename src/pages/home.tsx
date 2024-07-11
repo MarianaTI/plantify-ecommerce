@@ -8,6 +8,10 @@ import {
   Information,
   Main,
   MainContent,
+  ProductContainer,
+  SectionStyled,
+  Top,
+  TopContent,
 } from "@/styles/Home.style";
 import { useRouter } from "next/router";
 import React from "react";
@@ -20,22 +24,32 @@ export default function Home() {
 
   const navigateToShop = () => {
     router.push("/shop");
-  }
+  };
 
   const navigateToUs = () => {
     router.push("/about");
-  }
+  };
 
   return (
     <Container>
       <Main>
         <MainContent>
           <Information>
-            <h1><span className="color">Plants</span>, your daily dose of calm...</h1>
-            <p>Our store offers a wide selection of species adapted to different environments, along with care tips and gardening accessories to help you create your own green oasis at home.</p>
+            <h1>
+              <span className="color">Plants</span>, your daily dose of calm...
+            </h1>
+            <p>
+              Our store offers a wide selection of species adapted to different
+              environments, along with care tips and gardening accessories to
+              help you create your own green oasis at home.
+            </p>
             <ButttonContainer>
-              <ButtonComponent text="See more" secondary onClick={navigateToUs}/>
-              <ButtonComponent text="Buy now" onClick={navigateToShop}/>
+              <ButtonComponent
+                text="See more"
+                secondary
+                onClick={navigateToUs}
+              />
+              <ButtonComponent text="Buy now" onClick={navigateToShop} />
             </ButttonContainer>
           </Information>
           <ImageStyled>
@@ -44,10 +58,43 @@ export default function Home() {
         </MainContent>
       </Main>
       <CategoriesContainer>
-        <CategoriesComponent icon={GiTakeMyMoney} title="Best Prices" description="Discover the best prices and exclusive offers on our products."/>
-        <CategoriesComponent icon={FaTruckFast} title="Fast and Free Shipping" description="Enjoy fast and free shipping on all orders over $200."/>
-        <CategoriesComponent icon={PiUsersThreeFill} title="Excellent Customer Service" description="Our customer service is available 24/7 to assist you with anything you need."/>
+        <CategoriesComponent
+          icon={GiTakeMyMoney}
+          title="Best Prices"
+          description="Discover the best prices and exclusive offers on our products."
+        />
+        <CategoriesComponent
+          icon={FaTruckFast}
+          title="Fast and Free Shipping"
+          description="Enjoy fast and free shipping on all orders over $200."
+        />
+        <CategoriesComponent
+          icon={PiUsersThreeFill}
+          title="Excellent Customer Service"
+          description="Our customer service is available 24/7 to assist you with anything you need."
+        />
       </CategoriesContainer>
+      <SectionStyled>
+        <Top>
+          <TopContent>
+            <span className="top">Top products</span>
+            <h2>Plants for interior</h2>
+            <button onClick={navigateToShop}>Show more</button>
+          </TopContent>
+          <img src="/images/photo.png" />
+        </Top>
+        <Top>
+          <TopContent>
+            <span className="top">Top products</span>
+            <h2>Outdoor plants</h2>
+            <button onClick={navigateToShop}>Show more</button>
+          </TopContent>
+          <img src="/images/lavander.png" />
+        </Top>
+      </SectionStyled>
+      <ProductContainer>
+        <h3>New products</h3>
+      </ProductContainer>
     </Container>
   );
 }
