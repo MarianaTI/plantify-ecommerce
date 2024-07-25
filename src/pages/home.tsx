@@ -5,6 +5,9 @@ import {
   ButttonContainer,
   CategoriesContainer,
   Container,
+  Fertilizing,
+  FertilizingContainer,
+  Images,
   ImageStyled,
   Information,
   Main,
@@ -12,6 +15,7 @@ import {
   ProductContainer,
   Products,
   SectionStyled,
+  Tip,
   Top,
   TopContent,
 } from "@/styles/Home.style";
@@ -97,16 +101,25 @@ export default function Home() {
       <ProductContainer>
         <h3>New products</h3>
         <Products>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
-          <ProductComponent/>
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
+          <ProductComponent />
         </Products>
       </ProductContainer>
+      <FertilizingContainer>
+        <Fertilizing>
+          <Images>
+            <img />
+            <img />
+          </Images>
+          <Tip></Tip>
+        </Fertilizing>
+      </FertilizingContainer>
     </Container>
   );
 }

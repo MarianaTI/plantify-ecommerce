@@ -129,7 +129,7 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 48px 0;
+  margin: 72px 0;
   h3 {
     font-size: 30px;
     font-weight: 500;
@@ -142,4 +142,28 @@ export const Products = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 120px;
   padding: 32px 40px;
+  margin-top: 40px;
+`;
+
+export const FertilizingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0;
+`;
+
+export const Fertilizing = styled.div`
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80%;
+  height: 500px;
+`;
+
+export const Images = styled.section`
+  background-color: lavender;
+`;
+
+export const Tip = styled.section`
+  background-color: lightblue;
 `;
