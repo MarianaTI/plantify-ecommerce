@@ -149,11 +149,10 @@ export const FertilizingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10% 0;
+  margin: 32px 0;
 `;
 
 export const Fertilizing = styled.div`
-  background-color: aliceblue;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80%;
@@ -161,9 +160,34 @@ export const Fertilizing = styled.div`
 `;
 
 export const Images = styled.section`
-  background-color: lavender;
+  display: flex;
+  gap: 100px;
+  padding: 0 48px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 90%;
+    :last-child {
+      align-self: flex-end;
+    }
+  }
 `;
 
 export const Tip = styled.section`
-  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0 48px;
+  gap: 12px;
+  h4 {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--default);
+  }
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--secondary);
+  }
 `;

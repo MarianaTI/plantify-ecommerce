@@ -114,10 +114,24 @@ export default function Home() {
       <FertilizingContainer>
         <Fertilizing>
           <Images>
-            <img />
-            <img />
+            <img src="/images/tip1.jpg" />
+            <img src="/images/tip2.jpg" />
           </Images>
-          <Tip></Tip>
+          <Tip>
+            <h4>Fertilizing</h4>
+            <p>
+              Feed your plants with the appropriate fertilizer during their
+              growing season (usually spring and summer). Using the right type
+              of fertilizer provides essential nutrients that promote healthy
+              growth and vibrant blooms.
+            </p>
+            <p>
+              Be sure to follow the instructions on the fertilizer packaging for
+              the correct type and frequency to avoid over-fertilizing, which
+              can harm your plants. Proper fertilization helps your plants
+              thrive and maintain their beauty throughout the growing season.
+            </p>
+          </Tip>
         </Fertilizing>
       </FertilizingContainer>
     </Container>
