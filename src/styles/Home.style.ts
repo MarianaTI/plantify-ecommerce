@@ -129,7 +129,7 @@ export const ProductContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 72px 0;
+  margin: 10% 0;
   h3 {
     font-size: 30px;
     font-weight: 500;
@@ -149,7 +149,7 @@ export const FertilizingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 32px 0;
+  margin: 15% 0;
 `;
 
 export const Fertilizing = styled.div`
@@ -182,12 +182,77 @@ export const Tip = styled.section`
   gap: 12px;
   h4 {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--default);
   }
   p {
     font-size: 14px;
     font-weight: 500;
     color: var(--secondary);
+  }
+`;
+
+export const Parallax = styled.section`
+  position: relative;
+  background: #fff url("/images/parallax.png") fixed no-repeat 50% 50%;
+  overflow: hidden;
+  height: 350px;
+  background-size: cover;
+  margin: 6% 0;
+`;
+
+export const ParallaxContent = styled.div`
+  color: var(--neutral);
+  font-size: 22px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  min-width: 400px;
+  max-width: 450px;
+  background-color: var(--neutral);
+  border-radius: 15px;
+  margin-top: 32px;
+  input {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 70px 10px 18px;
+    font-size: 12px;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: var(--default);
+    outline: none;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  button {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    bottom: 8px;
+    z-index: 10;
+    color: var(--neutral);
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--secondary-500);
+    border-radius: 10px;
+    padding: 0 16px;
+    transition: all 0.6s ease;
+    :hover{
+      background-color: var(--tertiary-500);
+    }
   }
 `;

@@ -10,8 +10,11 @@ import {
   Images,
   ImageStyled,
   Information,
+  InputContainer,
   Main,
   MainContent,
+  Parallax,
+  ParallaxContent,
   ProductContainer,
   Products,
   SectionStyled,
@@ -134,6 +137,18 @@ export default function Home() {
           </Tip>
         </Fertilizing>
       </FertilizingContainer>
+      <Parallax>
+        <ParallaxContent>
+          <span>Have questions or need assistance?</span>
+          <span>
+            Email us at plantify@gmail.com and we’ll be happy to help!
+          </span>
+          <InputContainer>
+            <input placeholder="Write here... " type="email"/>
+            <button type="button">Send</button>
+          </InputContainer>
+        </ParallaxContent>
+      </Parallax>
     </Container>
   );
 }
