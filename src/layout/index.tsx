@@ -16,14 +16,13 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
-  const navbarStyled =
-    router.pathname === "/" || router.pathname === "/register";
+  const noNavbar = !router.pathname.match(/(\/register|\/)$/);
 
   return (
-    <StyledLayout hasNotLayout={navbarStyled}>
-      <Navbar />
-      <div>{children}</div>
-    </StyledLayout>
+    <div>
+    {noNavbar && <Navbar/>}
+    <div>{children}</div>
+</div>
   );
 };
 

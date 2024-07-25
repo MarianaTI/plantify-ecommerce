@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     // className="fixed top-0 left-0 right-0 z-50 bg-transparent"
-    <header>
+    <header> 
       <nav
         aria-label="Global"
         className="mx-auto flex  items-center justify-between p-3 lg:px-12"
