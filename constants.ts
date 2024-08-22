@@ -146,3 +146,27 @@ export const location = [
     cp: "Bronx, NY 10467",
   },
 ];
+
+export const category = [
+  {
+    name: "Indoor",
+  },
+  {
+    name: "Outdoor",
+  },
+  {
+    name: "Succulents",
+  },
+  {
+    name: "Tropical",
+  },
+  {
+    name: "Ornamental",
+  },
+  {
+    name: "Cacti",
+  },
+  {
+    name: "Fruit Trees",
+  },
+];
